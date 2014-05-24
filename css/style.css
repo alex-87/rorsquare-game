@@ -55,6 +55,10 @@ font-size: 30px;
 font-weight: bold;
 }
 
+info a {
+color: 00b4ff;
+}
+
 td {
 width: 100px;
 height: 100px;
