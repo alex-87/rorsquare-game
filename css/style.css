@@ -55,7 +55,12 @@ font-size: 30px;
 font-weight: bold;
 }
 
-#info:a {
+#info {
+margin-top: 40px;
+color: #000000;
+}
+
+a {
 color: 00b4ff;
 }
 
