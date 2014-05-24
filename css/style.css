@@ -53,17 +53,17 @@ height: 100px;
 }
 
 .btnRight {
-background-image: url("_right.png");
+background-image: url("../img/_right.png");
 }
 
 .btnLeft {
-background-image: url("_left.png");
+background-image: url("../img/_left.png");
 }
 
 .btnUp {
-background-image: url("_up.png");
+background-image: url("../img/_up.png");
 }
 
 .btnDown {
-background-image: url("_down.png");
+background-image: url("../img/_down.png");
 }
