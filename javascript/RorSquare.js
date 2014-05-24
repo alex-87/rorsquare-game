@@ -131,6 +131,7 @@ function desordre() {
 function victoireCase() {
 	if( !victoire() )return;
 	document.getElementById("victoire").style.display = "block";
+	document.getElementById("bodyGame").style.backgroundColor = "#ff9f00";
 }
 
 // Affichage
