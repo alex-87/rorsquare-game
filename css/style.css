@@ -46,6 +46,11 @@ font-size: 30px;
 display: none;
 }
 
+#consigne {
+width: 30%;
+height: auto;
+color: #00b4ff;
+}
 
 td {
 width: 100px;
