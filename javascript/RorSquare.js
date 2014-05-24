@@ -130,8 +130,8 @@ function desordre() {
 
 function victoireCase() {
 	if( !victoire() )return;
-	document.location="#victoireSignet"; 
 	document.getElementById("victoire").style.display = "block";
+	document.getElementById("bodyGame").style.background-color = "#ff9f00";
 }
 
 // Affichage
