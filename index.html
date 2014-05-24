@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="style.css" />
+	</head>
+<body style="background-color: #e0e0e0; text-align: center;">
+
+<div id="victoire">
+<h1>Bravo !</h1>
+<p>You win the <b>RorSquare</b> game !</p>
+<h3>Share your score with your friends:</h3>
+<p>
+<a href="https://twitter.com/intent/tweet?button_hashtag=RorSquare_game" class="twitter-hashtag-button" data-lang="en" data-related="RORSquare_game" data-text="I win the RORSquare Game !">Tweet #TwitterStories</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</p>
+</div>
+
+<table id="boradGame" style="text-align: center; font-size:50px; font-weight:bolder;font-family:'arial';text-shadow: 1px 1px 15px #ffffff;">
+	<tr><td></td><td class="btnUp" onclick="goHigh(0);refreshGrid();"></td><td class="btnUp" onclick="goHigh(1);refreshGrid();"></td><td class="btnUp" onclick="goHigh(2);refreshGrid();"></td><td class="btnUp" onclick="goHigh(3);refreshGrid();"></td><td></td></tr>
+	<tr><td class="btnLeft" onclick="goLeft(0);refreshGrid();"></td><td id="a"></td><td id="b"><td id="c"></td><td id="d"><td class="btnRight" onclick="goRight(0);refreshGrid();"></td><td id="r1"></td></tr>
+	<tr><td class="btnLeft" onclick="goLeft(1);refreshGrid();"></td><td id="e"></td><td id="f"><td id="g"></td><td id="h"><td class="btnRight" onclick="goRight(1);refreshGrid();"></td><td id="r2"></td></tr>
+	<tr><td class="btnLeft" onclick="goLeft(2);refreshGrid();"></td><td id="i"></td><td id="j"><td id="k"></td><td id="l"><td class="btnRight" onclick="goRight(2);refreshGrid();"></td><td id="r3"></td></tr>
+	<tr><td class="btnLeft" onclick="goLeft(3);refreshGrid();"></td><td id="m"></td><td id="n"><td id="o"></td><td id="p"><td class="btnRight" onclick="goRight(3);refreshGrid();"></td><td id="r4"></td></tr>
+	<tr><td></td><td class="btnDown" onclick="goDown(0);refreshGrid();"></td><td class="btnDown" onclick="goDown(1);refreshGrid();"></td><td class="btnDown" onclick="goDown(2);refreshGrid();"></td><td class="btnDown" onclick="goDown(3);refreshGrid();"></td><td></td></tr>
+	<tr><td></td><td id="r5"></td><td id="r6"></td><td id="r7"></td><td id="r8"><td></td></td><td id="square"></td></tr>
+</table>
+
+<script src="RorSquare.js"></script>
+
+</body>
+</html>
