@@ -130,7 +130,7 @@ function desordre() {
 
 function victoireCase() {
 	if( !victoire() )return;
-	window.location="#victoireSignet"; 
+	document.location="#victoireSignet"; 
 	document.getElementById("victoire").style.display = "block";
 }
 
