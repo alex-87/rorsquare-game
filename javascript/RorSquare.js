@@ -109,7 +109,7 @@ function genereGrilleValide() {
 		
 		for(var i=0; i < matrice.length; i++) {
 			for(var j=0; j < matrice.length; j++) {
-				matrice[i][j] = Math.floor((Math.random() * 10) ) % 32;
+				matrice[i][j] = Math.floor((Math.random() * 8) ) % 32;
 			};
 		};
 		
