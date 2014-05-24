@@ -61,7 +61,8 @@ color: #000000;
 }
 
 a {
-color: 00b4ff;
+color: #00b4ff;
+text-decoration: none;
 }
 
 td {
