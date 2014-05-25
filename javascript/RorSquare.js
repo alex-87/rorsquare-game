@@ -1,5 +1,5 @@
 
-squareNumber = Math.floor((Math.random() * 100) % 26) + 16;
+squareNumber = Math.floor((Math.random() * 100)) + 16;
 
 matrice = [ [0, 0, 0, 0],
             [0, 0, 0, 0],
