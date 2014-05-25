@@ -143,7 +143,7 @@ do {
 
 	matrice[0][0] = A - a;
 	matrice[0][1] = C + a + c;
-	matrice[0][2] = B + c - c;
+	matrice[0][2] = B + b - c;
 	matrice[0][3] = D - b;
 
 	matrice[1][0] = D + a - d;
