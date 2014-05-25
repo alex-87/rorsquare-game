@@ -142,6 +142,11 @@ function genereGrilleValide() {
 			}
 		}
 		
+		for(var i=0; i < matrice.length; i++) {
+			matrice[i][matrice.length - 1] = squareNumber - lireSommeX();
+			matrice[matrice.length - 1][i] = squareNumber - lireSommeY();
+		}
+		
 	//} while( !victoire() );
 }
 
