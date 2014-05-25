@@ -12,6 +12,7 @@ Example:
 ![screen](https://raw.githubusercontent.com/alex-87/rorsquare-game/master/doc/screen1.png)
 
 and if you win !
+----------------
 
 ![screen](https://raw.githubusercontent.com/alex-87/rorsquare-game/master/doc/screen2.png)
 
