@@ -129,11 +129,11 @@ function maximumNbr(a, b) {
 
 function genereGrilleValide() {
 	
-	do {
+	//do {
 		
 		for(var i=0; i < matrice.length - 1; i++) {
 			for(var j=0; j < matrice.length - 1; j++) {
-				matrice[i][j] = (( Math.floor( Math.random() * 10 ) ) % ( squareNumber - maximumNbr( lireSommeX(i), lireSommeY(j) ) )) - matrice.length;
+				matrice[i][j] = ( Math.floor( Math.random() * 10 ) ) % ( squareNumber - maximumNbr( lireSommeX(i), lireSommeY(j) ) );
 			}
 		}
 		
@@ -142,7 +142,7 @@ function genereGrilleValide() {
 			matrice[matrice.length - 1][i] = squareNumber - lireSommeY(i);
 		}
 		
-	} while( !victoire() );
+	//} while( !victoire() );
 }
 
 /*
