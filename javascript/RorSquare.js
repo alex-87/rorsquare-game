@@ -127,6 +127,15 @@ function maximumNbr(a, b) {
 
 // Construction du jeu
 
+function valeurNonNegative() {
+	for(var i=0; i < matrice.length; i++) {
+		for(var j = 0; j < matrice.length; j++) {
+			if( matrice[i][j] < 0 )return false;
+		}
+	}
+	return true;
+}
+
 function genereGrilleValide() {
 
 do {
@@ -161,7 +170,7 @@ do {
 	matrice[3][2] = A - b + c;
 	matrice[3][3] = C + a;
 	
-} while( !victoire() )
+} while( !victoire() || !valeurNonNegative() )
 
 /*
 	
