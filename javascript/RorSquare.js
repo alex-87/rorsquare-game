@@ -132,8 +132,8 @@ function genereGrilleValide() {
 	//do {
 	
 		for(var i=0; i < matrice.length; i++) {
-			matrice[i][matrice.length - 1] = Math.floor((Math.random() * 10) %(squareNumber / 16));
-			matrice[matrice.length - 1][i] = Math.floor((Math.random() * 10) %(squareNumber / 16));
+			matrice[i][matrice.length - 1] = Math.floor((Math.random() * 10) %(squareNumber / 8));
+			matrice[matrice.length - 1][i] = Math.floor((Math.random() * 10) %(squareNumber / 8));
 		}
 		
 		for(var i=0; i < matrice.length - 1; i++) {
