@@ -6,6 +6,8 @@ using the arrows by finding the same sum for all lines and columns.
 
   You can play this game here: [https://alex-87.github.io/rorsquare-game](https://alex-87.github.io/rorsquare-game/)
 
+The grid is generated using the **Berholt formula**.
+
 Example:
 --------
 
