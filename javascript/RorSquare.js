@@ -120,8 +120,8 @@ function lireSommeY(range) {
 	return result;
 }
 
-function minimumNbr(a, b) {
-	if( a < b )return a;
+function maximumNbr(a, b) {
+	if( a > b )return a;
 	return b;
 }
 
@@ -131,13 +131,13 @@ function genereGrilleValide() {
 	
 	for(var i=0; i < matrice.length - 1; i++) {
 		for(var j=0; j < matrice.length - 1; j++) {
-			matrice[i][j] = ( Math.floor( Math.random() * 10 ) ) % ( squareNumber - minimumNbr( lireSommeY(i), lireSommeY(j) ) );
+			matrice[i][j] = ( Math.floor( Math.random() * 10 ) ) % ( squareNumber - maximumNbr( lireSommeY(i), lireSommeY(j) ) );
 		}
 	}
 	
 	for(var i=0; i < matrice.length; i++) {
-		matrice[i][matrice.length - 1] = squareNumber - lireSommeY(i);
-		matrice[matrice.length - 1][i] = squareNumber - lireSommeX(i);
+		matrice[i][matrice.length - 1] = squareNumber - lireSommeX(i);
+		matrice[matrice.length - 1][i] = squareNumber - lireSommeY(i);
 	}
 }
 
