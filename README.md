@@ -13,7 +13,7 @@ Example:
 
 and if you win !
 
-![screen](https://raw.githubusercontent.com/alex-87/rorsquare-game/master/doc/screen1.png)
+![screen](https://raw.githubusercontent.com/alex-87/rorsquare-game/master/doc/screen2.png)
 
 But I've never solved it yet :(
 
