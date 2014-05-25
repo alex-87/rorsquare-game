@@ -92,6 +92,7 @@ function victoire() {
 	return true;
 }
 
+
 function defSquareNumber() {
 	var resTemp = 0;
 	for(var u=0; u < matrice.length; u++) {
@@ -100,22 +101,79 @@ function defSquareNumber() {
 	squareNumber = resTemp;
 }
 
+
 // ###
 
+function lireSommeX(range) {
+	var result = 0;
+	for(var i=0; i < matrice.length; i++) {
+		result += matrice[range][i];
+	}
+	return result;
+}
+
+function lireSommeY(range) {
+	var result = 0;
+	for(var i=0; i < matrice.length; i++) {
+		result += matrice[i][range];
+	}
+	return result;
+}
+
+function maximumNbr(a, b) {
+	if( a > b )return a;
+	return b;
+}
+
 // Construction du jeu
+
+function valeurNonNegative() {
+	for(var i=0; i < matrice.length; i++) {
+		for(var j = 0; j < matrice.length; j++) {
+			if( matrice[i][j] < 0 )return false;
+		}
+	}
+	return true;
+}
+
 function genereGrilleValide() {
-	
+
 	do {
 		
-		for(var i=0; i < matrice.length; i++) {
-			for(var j=0; j < matrice.length; j++) {
-				matrice[i][j] = Math.floor((Math.random() * 10) ) % 32;
-			};
-		};
+		var A = Math.floor((Math.random() * 10));
+		var B = Math.floor((Math.random() * 10));
+		var C = Math.floor((Math.random() * 10));
+		var D = Math.floor((Math.random() * 10));
+
+		var a = Math.floor((Math.random() * 10));
+		var b = Math.floor((Math.random() * 10));
+		var c = Math.floor((Math.random() * 10));
+		var d = Math.floor((Math.random() * 10));
+
+		matrice[0][0] = A - a;
+		matrice[0][1] = C + a + c;
+		matrice[0][2] = B + b - c;
+		matrice[0][3] = D - b;
+
+		matrice[1][0] = D + a - d;
+		matrice[1][1] = B;
+		matrice[1][2] = C;
+		matrice[1][3] = A - a + d;
+
+		matrice[2][0] = C - b + d;
+		matrice[2][1] = A;
+		matrice[2][2] = D;
+		matrice[2][3] = B + b - d;
+
+		matrice[3][0] = B + b;
+		matrice[3][1] = D - a - c;
+		matrice[3][2] = A - b + c;
+		matrice[3][3] = C + a;
 		
-	} while( !victoire() );
-	
+	} while( !victoire() || !valeurNonNegative() )
+
 }
+
 
 function desordre() {
 	
