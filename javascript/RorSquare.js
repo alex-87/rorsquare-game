@@ -131,7 +131,7 @@ function genereGrilleValide() {
 	
 	for(var i=0; i < matrice.length - 1; i++) {
 		for(var j=0; j < matrice.length - 1; j++) {
-			matrice[i][j] = ( Math.floor( Math.random() * 10 ) ) % ( squareNumber - minimumNbr( lireSommeY(i), lireSommeY(j) ) );
+			matrice[i][j] = ( Math.floor( Math.random() * 10 ) ) % ( squareNumber - minimumNbr( lireSommeY(j), lireSommeY(i) ) );
 		}
 	}
 	
@@ -205,13 +205,13 @@ function refreshGrid() {
 	
 	document.getElementById("square").innerHTML = squareNumber;
 	
-	victoireCase();
+	//victoireCase();
 }
 
 function initialiser() {
 	genereGrilleValide();
 	//defSquareNumber();
-	desordre();
+	//desordre();
 	refreshGrid();
 }
 
