@@ -231,7 +231,7 @@ function refreshGrid() {
 function initialiser() {
 	genereGrilleValide();
 	defSquareNumber();
-	//desordre();
+	desordre();
 	refreshGrid();
 }
 
