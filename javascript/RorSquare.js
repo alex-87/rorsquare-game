@@ -121,7 +121,8 @@ function lireSommeY(range) {
 }
 
 function minimumNbr(a, b) {
-	(a < b ? return a: return b);
+	if( a < b )return a;
+	return b;
 }
 
 // Construction du jeu
