@@ -1,5 +1,5 @@
 
-squareNumber = (Math.floor((Math.random() * 100)) % 26) + 10;
+squareNumber = 0;
 
 matrice = [ [0, 0, 0, 0],
             [0, 0, 0, 0],
@@ -92,7 +92,7 @@ function victoire() {
 	return true;
 }
 
-/*
+
 function defSquareNumber() {
 	var resTemp = 0;
 	for(var u=0; u < matrice.length; u++) {
@@ -100,7 +100,7 @@ function defSquareNumber() {
 	};
 	squareNumber = resTemp;
 }
-*/
+
 
 // ###
 
@@ -138,74 +138,42 @@ function valeurNonNegative() {
 
 function genereGrilleValide() {
 
-do {
-	
-	var A = Math.floor((Math.random() * 10));
-	var B = Math.floor((Math.random() * 10));
-	var C = Math.floor((Math.random() * 10));
-	var D = Math.floor((Math.random() * 10));
-
-	var a = Math.floor((Math.random() * 10));
-	var b = Math.floor((Math.random() * 10));
-	var c = Math.floor((Math.random() * 10));
-	var d = Math.floor((Math.random() * 10));
-
-	matrice[0][0] = A - a;
-	matrice[0][1] = C + a + c;
-	matrice[0][2] = B + b - c;
-	matrice[0][3] = D - b;
-
-	matrice[1][0] = D + a - d;
-	matrice[1][1] = B;
-	matrice[1][2] = C;
-	matrice[1][3] = A - a + d;
-
-	matrice[2][0] = C - b + d;
-	matrice[2][1] = A;
-	matrice[2][2] = D;
-	matrice[2][3] = B + b - d;
-
-	matrice[3][0] = B + b;
-	matrice[3][1] = D - a - c;
-	matrice[3][2] = A - b + c;
-	matrice[3][3] = C + a;
-	
-} while( !victoire() || !valeurNonNegative() )
-
-/*
-	
-		for(var i=0; i < matrice.length; i++) {
-			matrice[i][matrice.length - 1] = Math.floor((Math.random() * 10) %(squareNumber / 8));
-			matrice[matrice.length - 1][i] = Math.floor((Math.random() * 10) %(squareNumber / 8));
-		}
-		
-		for(var i=0; i < matrice.length - 1; i++) {
-			for(var j=0; j < matrice.length - 1; j++) {
-				matrice[i][j] = ( Math.floor( Math.random() * 10 ) ) % ( squareNumber - maximumNbr( lireSommeX(i), lireSommeY(j) ));
-			}
-		}
-		
-		for(var i=0; i < matrice.length; i++) {
-			matrice[i][matrice.length - 1] = squareNumber - maximumNbr(lireSommeY(i), lireSommeX(i) );
-			matrice[matrice.length - 1][i] = squareNumber - maximumNbr(lireSommeY(i), lireSommeX(i) );
-		}
-		
-*/
-}
-
-/*
-function genereGrilleValide() {
 	do {
 		
-		for(var i=0; i < matrice.length; i++) {
-			for(var j=0; j < matrice.length; j++) {
-				matrice[i][j] = Math.floor((Math.random() * 10) );
-			};
-		};
+		var A = Math.floor((Math.random() * 10));
+		var B = Math.floor((Math.random() * 10));
+		var C = Math.floor((Math.random() * 10));
+		var D = Math.floor((Math.random() * 10));
+
+		var a = Math.floor((Math.random() * 10));
+		var b = Math.floor((Math.random() * 10));
+		var c = Math.floor((Math.random() * 10));
+		var d = Math.floor((Math.random() * 10));
+
+		matrice[0][0] = A - a;
+		matrice[0][1] = C + a + c;
+		matrice[0][2] = B + b - c;
+		matrice[0][3] = D - b;
+
+		matrice[1][0] = D + a - d;
+		matrice[1][1] = B;
+		matrice[1][2] = C;
+		matrice[1][3] = A - a + d;
+
+		matrice[2][0] = C - b + d;
+		matrice[2][1] = A;
+		matrice[2][2] = D;
+		matrice[2][3] = B + b - d;
+
+		matrice[3][0] = B + b;
+		matrice[3][1] = D - a - c;
+		matrice[3][2] = A - b + c;
+		matrice[3][3] = C + a;
 		
-	} while( !victoire() );
-	
-}*/
+	} while( !victoire() || !valeurNonNegative() )
+
+}
+
 
 function desordre() {
 	
@@ -262,7 +230,7 @@ function refreshGrid() {
 
 function initialiser() {
 	genereGrilleValide();
-	//defSquareNumber();
+	defSquareNumber();
 	//desordre();
 	refreshGrid();
 }
