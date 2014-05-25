@@ -1,5 +1,5 @@
 
-squareNumber = 0;
+squareNumber = (Math.floor((Math.random() * 100) % 26) + 16;
 
 matrice = [ [0, 0, 0, 0],
             [0, 0, 0, 0],
@@ -92,6 +92,7 @@ function victoire() {
 	return true;
 }
 
+/*
 function defSquareNumber() {
 	var resTemp = 0;
 	for(var u=0; u < matrice.length; u++) {
@@ -99,23 +100,59 @@ function defSquareNumber() {
 	};
 	squareNumber = resTemp;
 }
+*/
 
 // ###
 
+function lireSommeX(range) {
+	var result = 0;
+	for(var i=0; i < matrice.length; i++) {
+		result += matrice[range][i];
+	}
+	return result;
+}
+
+function lireSommeY(range) {
+	var result = 0;
+	for(var i=0; i < matrice.length; i++) {
+		result += matrice[i][range];
+	}
+	return result;
+}
+
+function minimumNbr(a, b) {
+	(a < b ? return a: return b);
+}
+
 // Construction du jeu
+
 function genereGrilleValide() {
 	
+	for(var i=0; i < matrice.length - 1; i++) {
+		for(var j=0; j < matrice.length - 1; j++) {
+			matrice[i][j] = ( Math.floor( Math.random() * 10 ) ) % ( squareNumber - minimumNbr( lireSommeY(i), lireSommeY(j) ) );
+		}
+	}
+	
+	for(var i=0; i < matrice.length; i++) {
+		matrice[i][matrice.length] = squareNumber - lireSommeY(i);
+		matrice[matrice.length][i] = squareNumber - lireSommeX(i);
+	}
+}
+
+/*
+function genereGrilleValide() {
 	do {
 		
 		for(var i=0; i < matrice.length; i++) {
 			for(var j=0; j < matrice.length; j++) {
-				matrice[i][j] = Math.floor((Math.random() * 8) ) % 32;
+				matrice[i][j] = Math.floor((Math.random() * 10) );
 			};
 		};
 		
 	} while( !victoire() );
 	
-}
+}*/
 
 function desordre() {
 	
@@ -172,7 +209,7 @@ function refreshGrid() {
 
 function initialiser() {
 	genereGrilleValide();
-	defSquareNumber();
+	//defSquareNumber();
 	desordre();
 	refreshGrid();
 }
