@@ -128,8 +128,39 @@ function maximumNbr(a, b) {
 // Construction du jeu
 
 function genereGrilleValide() {
-	
-	//do {
+
+var A = Math.floor((Math.random() * 10));
+var B = Math.floor((Math.random() * 10));
+var C = Math.floor((Math.random() * 10));
+var D = Math.floor((Math.random() * 10));
+
+var a = Math.floor((Math.random() * 10));
+var b = Math.floor((Math.random() * 10));
+var c = Math.floor((Math.random() * 10));
+var d = Math.floor((Math.random() * 10));
+
+matrice[0][0] = A - a;
+matrice[0][1] = C + a + c;
+matrice[0][2] = B + c - c;
+matrice[0][3] = D - b;
+
+matrice[1][0] = D + a - d;
+matrice[1][1] = B;
+matrice[1][2] = C;
+matrice[1][3] = A - a + d;
+
+matrice[2][0] = C - b + d;
+matrice[2][1] = A;
+matrice[2][2] = D;
+matrice[2][3] = B + b - d;
+
+matrice[3][0] = B + b;
+matrice[3][1] = D - a - c;
+matrice[3][2] = A - b + c;
+matrice[3][3] = C + a;
+
+
+/*
 	
 		for(var i=0; i < matrice.length; i++) {
 			matrice[i][matrice.length - 1] = Math.floor((Math.random() * 10) %(squareNumber / 8));
@@ -147,7 +178,7 @@ function genereGrilleValide() {
 			matrice[matrice.length - 1][i] = squareNumber - maximumNbr(lireSommeY(i), lireSommeX(i) );
 		}
 		
-	//} while( !victoire() );
+*/
 }
 
 /*
