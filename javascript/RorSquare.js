@@ -130,16 +130,16 @@ function maximumNbr(a, b) {
 function genereGrilleValide() {
 	
 	//do {
+	
+		for(var i=0; i < matrice.length; i++) {
+			matrice[i][matrice.length - 1] = Math.floor((Math.random() * 10) %(squareNumber / 16));
+			matrice[matrice.length - 1][i] = Math.floor((Math.random() * 10) %(squareNumber / 16));
+		}
 		
 		for(var i=0; i < matrice.length - 1; i++) {
 			for(var j=0; j < matrice.length - 1; j++) {
-				matrice[i][j] = ( Math.floor( Math.random() * 10 ) ) % (( squareNumber - maximumNbr( lireSommeX(i), lireSommeY(j) ) ) / (i+1));
+				matrice[i][j] = ( Math.floor( Math.random() * 10 ) ) % ( squareNumber - maximumNbr( lireSommeX(i), lireSommeY(j) ));
 			}
-		}
-		
-		for(var i=0; i < matrice.length; i++) {
-			matrice[i][matrice.length - 1] = squareNumber - lireSommeX(i);
-			matrice[matrice.length - 1][i] = squareNumber - lireSommeY(i);
 		}
 		
 	//} while( !victoire() );
