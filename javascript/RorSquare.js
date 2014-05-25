@@ -143,8 +143,8 @@ function genereGrilleValide() {
 		}
 		
 		for(var i=0; i < matrice.length; i++) {
-			matrice[i][matrice.length - 1] = squareNumber - lireSommeY(i);
-			matrice[matrice.length - 1][i] = squareNumber - lireSommeX(i);
+			matrice[i][matrice.length - 1] = squareNumber - maximumNbr(lireSommeY(i), lireSommeX(i) );
+			matrice[matrice.length - 1][i] = squareNumber - maximumNbr(lireSommeY(i), lireSommeX(i) );
 		}
 		
 	//} while( !victoire() );
