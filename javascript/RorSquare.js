@@ -225,7 +225,7 @@ function refreshGrid() {
 	
 	document.getElementById("square").innerHTML = squareNumber;
 	
-	//victoireCase();
+	victoireCase();
 }
 
 function initialiser() {
