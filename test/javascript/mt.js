@@ -169,6 +169,8 @@ function ballAction(event, coY, coX) {
 			
 			if( Math.abs(event.gesture.deltaX) > Math.abs(event.gesture.deltaY) ) {
 				
+				if( Math.abs(event.gesture.deltaX) < 50 )break;
+				
 				if( event.gesture.deltaX < 0 ) {
 					goLeft(coX);
 				} else {
@@ -176,6 +178,9 @@ function ballAction(event, coY, coX) {
 				}
 				
 			} else {
+				
+				if( Math.abs(event.gesture.deltaY) < 50 )break;
+				
 				if( event.gesture.deltaY < 0 ) {
 					goHigh(coY);
 				} else {
