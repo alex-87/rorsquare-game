@@ -111,52 +111,52 @@ var tactileB = Hammer($("#b"), {
 		drag_min_distance: 0
 });
 
-tactileA.on("touch", function(event) {
+tactileA.on("touch drag drag", function(event) {
 	ballAction(event, 0, 0);
 });
-tactileB.on("touch", function(event) {
+tactileB.on("touch drag", function(event) {
 	ballAction(event, 1, 0);
 });
-tactileC.on("touch", function(event) {
+tactileC.on("touch drag", function(event) {
 	ballAction(event, 2, 0);
 });
-tactileD.on("touch", function(event) {
+tactileD.on("touch drag", function(event) {
 	ballAction(event, 3, 0);
 });
-tactileE.on("touch", function(event) {
+tactileE.on("touch drag", function(event) {
 	ballAction(event, 0, 1);
 });
-tactileF.on("touch", function(event) {
+tactileF.on("touch drag", function(event) {
 	ballAction(event, 1, 1);
 });
-tactileG.on("touch", function(event) {
+tactileG.on("touch drag", function(event) {
 	ballAction(event, 2, 1);
 });
-tactileH.on("touch", function(event) {
+tactileH.on("touch drag", function(event) {
 	ballAction(event, 3, 1);
 });
-tactileI.on("touch", function(event) {
+tactileI.on("touch drag", function(event) {
 	ballAction(event, 0, 2);
 });
-tactileJ.on("touch", function(event) {
+tactileJ.on("touch drag", function(event) {
 	ballAction(event, 1, 2);
 });
-tactileK.on("touch", function(event) {
+tactileK.on("touch drag", function(event) {
 	ballAction(event, 2, 2);
 });
-tactileL.on("touch", function(event) {
+tactileL.on("touch drag", function(event) {
 	ballAction(event, 3, 2);
 });
-tactileM.on("touch", function(event) {
+tactileM.on("touch drag", function(event) {
 	ballAction(event, 0, 3);
 });
-tactileN.on("touch", function(event) {
+tactileN.on("touch drag", function(event) {
 	ballAction(event, 1, 3);
 });
-tactileO.on("touch", function(event) {
+tactileO.on("touch drag", function(event) {
 	ballAction(event, 2, 3);
 });
-tactileP.on("touch", function(event) {
+tactileP.on("touch drag", function(event) {
 	ballAction(event, 3, 3);
 });
 
@@ -165,7 +165,10 @@ function ballAction(event, coY, coX) {
 	switch(event.type) {
 		
 		case "touch":
+		break;
 		
+		case "drag":
+			console.log('x: ' + Math.abs(event.gesture.deltaX) + ', y: ' + Math.abs(event.gesture.deltaY) );
 			if( Math.abs(event.gesture.deltaX) > Math.abs(event.gesture.deltaY) ) {
 				
 				if( event.gesture.deltaX < 0 ) {
@@ -175,7 +178,7 @@ function ballAction(event, coY, coX) {
 				}
 				
 			} else {
-					if( event.gesture.deltaY < 0 ) {
+				if( event.gesture.deltaY < 0 ) {
 					goHigh(coY);
 				} else {
 					goDown(coY);
