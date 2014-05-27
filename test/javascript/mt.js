@@ -169,7 +169,7 @@ function ballAction(event, coY, coX) {
 			
 			if( Math.abs(event.gesture.deltaX) > Math.abs(event.gesture.deltaY) ) {
 				
-				if( Math.abs(event.gesture.deltaX) < 50 || Math.abs(event.gesture.deltaX) > 60 )break;
+				if( Math.abs(event.gesture.deltaX) < 20 || Math.abs(event.gesture.deltaX) > 40 )break;
 				
 				if( event.gesture.deltaX < 0 ) {
 					goLeft(coX);
@@ -179,7 +179,7 @@ function ballAction(event, coY, coX) {
 				
 			} else {
 				
-				if( Math.abs(event.gesture.deltaY) < 50 || Math.abs(event.gesture.deltaY) > 60 )break;
+				if( Math.abs(event.gesture.deltaY) < 20 || Math.abs(event.gesture.deltaY) > 40 )break;
 				
 				if( event.gesture.deltaY < 0 ) {
 					goHigh(coY);
