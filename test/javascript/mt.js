@@ -26,13 +26,14 @@ hammer.on("touch tap doubletap transformstart transform dragstart drag hold", fu
 
 function ballAction(event) {
 	switch(event.type) {
-
+		
 		case "touch" :
-			if( event.gesture.deltaX % 200 == 0) {
+			if( event.gesture.deltaX > 0) {
 				console.log("->"+event.gesture.deltaX);
 				goRight(0);
+			} else {
+				goRight(0);
 			}
-			goLeft(2);
 			//positionY = lastPositionY + event.gesture.deltaY;
 		break;
 	}
