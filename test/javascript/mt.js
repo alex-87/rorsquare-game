@@ -161,6 +161,11 @@ tactileP.on("touch drag", function(event) {
 });
 
 
+function delay( ms ){
+	var end = new Date().getTime() + ms;
+	while ( end > new Date().getTime() );
+}
+
 function ballAction(event, coY, coX) {
 	switch(event.type) {
 		
@@ -187,6 +192,8 @@ function ballAction(event, coY, coX) {
 
 		break;
 	}
+	
 	refreshGrid();
+	delay(200);
 }
 
