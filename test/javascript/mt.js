@@ -161,7 +161,7 @@ tactileP.on("touch", function(event) {
 });
 
 
-function ballAction(event, coX, coY) {
+function ballAction(event, coY, coX) {
 	switch(event.type) {
 		
 		case "touch":
