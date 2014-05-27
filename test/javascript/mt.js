@@ -1,12 +1,8 @@
 
-
-// on affiche les zones touchées par le multitouch
-
 if(!Hammer.HAS_TOUCHEVENTS && !Hammer.HAS_POINTEREVENTS) {
 		Hammer.plugins.showTouches();
 }
 
-// on simule le multitouch grâce à SHIFT + MOUSE
 if(!Hammer.HAS_TOUCHEVENTS && !Hammer.HAS_POINTEREVENTS) {
 		Hammer.plugins.fakeMultitouch();
 }
@@ -161,11 +157,6 @@ tactileP.on("touch drag", function(event) {
 });
 
 
-function delay( ms ){
-	var end = new Date().getTime() + ms;
-	while ( end > new Date().getTime() );
-}
-
 function ballAction(event, coY, coX) {
 	switch(event.type) {
 		
@@ -173,7 +164,9 @@ function ballAction(event, coY, coX) {
 		break;
 		
 		case "drag":
-			console.log('x: ' + Math.abs(event.gesture.deltaX) + ', y: ' + Math.abs(event.gesture.deltaY) );
+			
+			//console.log('x: ' + Math.abs(event.gesture.deltaX) + ', y: ' + Math.abs(event.gesture.deltaY) );
+			
 			if( Math.abs(event.gesture.deltaX) > Math.abs(event.gesture.deltaY) ) {
 				
 				if( event.gesture.deltaX < 0 ) {
@@ -194,6 +187,5 @@ function ballAction(event, coY, coX) {
 	}
 	
 	refreshGrid();
-	delay(200);
 }
 
