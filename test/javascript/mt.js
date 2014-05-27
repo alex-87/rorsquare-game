@@ -13,9 +13,11 @@ if(!Hammer.HAS_TOUCHEVENTS && !Hammer.HAS_POINTEREVENTS) {
 
 
 var hammer = Hammer($("#a"), {
-	transform_always_block: true,
-	tap_always: false,
-	drag_min_distance: 50
+		transform_always_block: true,
+        drag_block_horizontal: true,
+        drag_block_vertical: true,
+		tap_always: false,
+		drag_min_distance: 0
 });
 
 hammer.on("touch tap doubletap transformstart transform dragstart drag hold", function(event) {
@@ -26,11 +28,9 @@ function ballAction(event) {
 	switch(event.type) {
 
 		case "drag" :
-			if( event.gesture.deltaX > 0 && event.gesture.deltaX < 50) {
+			if( event.gesture.deltaX % 200 == 0) {
 				console.log("->"+event.gesture.deltaX);
 				goRight(0);
-			} else {
-				goLeft(0);
 			}
 			//positionY = lastPositionY + event.gesture.deltaY;
 		break;
