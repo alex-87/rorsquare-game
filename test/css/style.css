@@ -97,23 +97,23 @@ height: 100px;
 .btnRight {
 background-position: center;
 background-repeat: no-repeat;
-background-image: url("https://raw.githubusercontent.com/alex-87/rorsquare-game/gh-pages/img/_right.png");
+background-image: url("../img/_right.png");
 }
 
 .btnLeft {
 background-position: center;
 background-repeat: no-repeat;
-background-image: url("https://raw.githubusercontent.com/alex-87/rorsquare-game/gh-pages/img/_left.png");
+background-image: url("../img/_left.png");
 }
 
 .btnUp {
 background-position: center;
 background-repeat: no-repeat;
-background-image: url("https://raw.githubusercontent.com/alex-87/rorsquare-game/gh-pages/img/_up.png");
+background-image: url("../img/_up.png");
 }
 
 .btnDown {
 background-position: center;
 background-repeat: no-repeat;
-background-image: url("https://raw.githubusercontent.com/alex-87/rorsquare-game/gh-pages/img/_down.png");
+background-image: url("../img/_down.png");
 }

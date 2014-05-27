@@ -130,7 +130,7 @@ function maximumNbr(a, b) {
 function valeurNonNegative() {
 	for(var i=0; i < matrice.length; i++) {
 		for(var j = 0; j < matrice.length; j++) {
-			if( matrice[i][j] < 0 )return false;
+			if( matrice[i][j] < 0 || matrice[i][j] > 9)return false;
 		}
 	}
 	return true;
@@ -144,7 +144,6 @@ function genereGrilleValide() {
 		var B = Math.floor((Math.random() * 10));
 		var C = Math.floor((Math.random() * 10));
 		var D = Math.floor((Math.random() * 10));
-
 		var a = Math.floor((Math.random() * 10));
 		var b = Math.floor((Math.random() * 10));
 		var c = Math.floor((Math.random() * 10));

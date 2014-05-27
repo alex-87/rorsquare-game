@@ -5,6 +5,13 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="css/style.css" />
 		
+		<script type="text/javascript" src="http://www.soluka.fr/wp-content/themes/soluka/js/lib/jquery-2.0.3.min.js"></script>
+		<script type="text/javascript" src="http://www.soluka.fr/wp-content/themes/soluka/js/lib/hammer.js"></script>
+		<script type="text/javascript" src="http://www.soluka.fr/wp-content/themes/soluka/js/lib/jquery.transit.js"></script>
+
+		<script src="https://raw.githubusercontent.com/EightMedia/hammer.js/master/plugins/hammer.fakemultitouch.js"></script>
+		<script src="https://raw.githubusercontent.com/EightMedia/hammer.js/master/plugins/hammer.showtouches.js"></script>
+		
 		<script type="text/javascript">var switchTo5x=true;</script>
 		<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
 		<script type="text/javascript">stLight.options({publisher: "ur-5aa7516f-9abe-7179-8479-818d4217c66c", doNotHash: true, doNotCopy: true, hashAddressBar: false});</script>
@@ -53,7 +60,7 @@
 </p>
 </div>
 
-<table id="boradGame" style="text-align: center; font-size:50px; font-weight:bolder;font-family:'arial';text-shadow: 1px 1px 15px #ffffff;">
+<table id="boardGame">
 	<tr><td></td><td class="btnUp" onclick="goHigh(0);refreshGrid();"></td><td class="btnUp" onclick="goHigh(1);refreshGrid();"></td><td class="btnUp" onclick="goHigh(2);refreshGrid();"></td><td class="btnUp" onclick="goHigh(3);refreshGrid();"></td><td></td></tr>
 	<tr><td class="btnLeft" onclick="goLeft(0);refreshGrid();"></td><td id="a"></td><td id="b"><td id="c"></td><td id="d"><td class="btnRight" onclick="goRight(0);refreshGrid();"></td><td id="r1"></td></tr>
 	<tr><td class="btnLeft" onclick="goLeft(1);refreshGrid();"></td><td id="e"></td><td id="f"><td id="g"></td><td id="h"><td class="btnRight" onclick="goRight(1);refreshGrid();"></td><td id="r2"></td></tr>
@@ -66,6 +73,7 @@
 <div id="info">By Alex-87 - <a href="https://github.com/alex-87">https://github.com/alex-87</a></div>
 
 <script src="javascript/RorSquare.js"></script>
+<script src="javascript/mt.js"></script>
 
 </body>
 </html>
