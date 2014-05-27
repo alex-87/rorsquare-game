@@ -21,7 +21,7 @@ background-color: #d7d7d7;
 /*background-color: #ffffff;*/
 border-radius: 10px;
 /*color: #00b4ff;*/
-font-size:150px;
+font-size:100px;
 color: #0067ff;
 /*padding: 15px;*/
 }
@@ -95,17 +95,25 @@ height: 100px;
 }
 
 .btnRight {
+background-position: center;
+background-repeat: no-repeat;
 background-image: url("https://raw.githubusercontent.com/alex-87/rorsquare-game/gh-pages/img/_right.png");
 }
 
 .btnLeft {
+background-position: center;
+background-repeat: no-repeat;
 background-image: url("https://raw.githubusercontent.com/alex-87/rorsquare-game/gh-pages/img/_left.png");
 }
 
 .btnUp {
+background-position: center;
+background-repeat: no-repeat;
 background-image: url("https://raw.githubusercontent.com/alex-87/rorsquare-game/gh-pages/img/_up.png");
 }
 
 .btnDown {
+background-position: center;
+background-repeat: no-repeat;
 background-image: url("https://raw.githubusercontent.com/alex-87/rorsquare-game/gh-pages/img/_down.png");
 }
